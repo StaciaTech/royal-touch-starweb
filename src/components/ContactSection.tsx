@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Instagram, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import AboveImage from "../assets/Aboveorbelowmapimage.jpg";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -15,23 +16,38 @@ export const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     toast({
       title: "Message Sent!",
       description: "We'll get back to you soon.",
     });
-    
+
     setFormData({ name: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
 
   const contactLinks = [
-    { icon: Phone, label: "Call Us", href: "tel:+919876543210", text: "+91 98765 43210" },
-    { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/919876543210", text: "Chat with us" },
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com/royaltouch", text: "@royaltouch" },
+    {
+      icon: Phone,
+      label: "Call Us",
+      href: "tel:+919876543210",
+      text: "+91 98765 43210",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      href: "https://wa.me/919876543210",
+      text: "Chat with us",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://instagram.com/royaltouch",
+      text: "@royaltouch",
+    },
   ];
 
   return (
@@ -58,10 +74,14 @@ export const ContactSection = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-medium mb-2">Visit Us</h3>
+                  <h3 className="font-serif text-xl font-medium mb-2">
+                    Visit Us
+                  </h3>
                   <p className="text-muted-foreground font-sans leading-relaxed">
-                    326/1, Ramakrishna Nagar,<br />
-                    Main Road, Porur,<br />
+                    326/1, Ramakrishna Nagar,
+                    <br />
+                    Main Road, Porur,
+                    <br />
                     Chennai – 600116
                   </p>
                 </div>
@@ -69,7 +89,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Contact Links */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4">
               {contactLinks.map((link) => (
                 <a
                   key={link.label}
@@ -82,30 +102,33 @@ export const ContactSection = () => {
                     <link.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <span className="block text-sm text-muted-foreground">{link.label}</span>
-                    <span className="font-sans font-medium text-foreground">{link.text}</span>
+                    <span className="block text-sm text-muted-foreground">
+                      {link.label}
+                    </span>
+                    <span className="font-sans font-medium text-foreground">
+                      {link.text}
+                    </span>
                   </div>
                 </a>
               ))}
             </div>
-
-            {/* Map Embed */}
-            <div className="aspect-video bg-muted rounded-sm overflow-hidden border border-border/50">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0!2d80.1!3d13.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzAwLjAiTiA4MMKwMDYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Royal Touch Location"
-              />
-            </div>
+          </div>
+          {/* Map Embed */}
+          <div className=" bg-muted rounded-[0.5rem] h-full overflow-hidden border border-border/50">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0!2d80.1!3d13.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzAwLjAiTiA4MMKwMDYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: "0.5rem" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Royal Touch Location"
+            />
           </div>
 
           {/* Contact Form */}
-          <div className="card-service">
+          {/* <div className="card-service">
             <h3 className="font-serif text-2xl font-medium mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -155,7 +178,14 @@ export const ContactSection = () => {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
-          </div>
+          </div> */}
+        </div>
+        <div className="aspect-[16/6] mt-8">
+          <img
+            src={AboveImage}
+            alt=""
+            className="w-full h-full object-cover object-top"
+          />
         </div>
       </div>
     </section>

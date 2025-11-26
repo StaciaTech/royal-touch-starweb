@@ -4,8 +4,9 @@ import { Menu, X, Scissors } from "lucide-react";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "Walk In", href: "#walkin" },
   { label: "About", href: "#about" },
+  { label: "Walk In", href: "#walkin" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Careers", href: "#careers" },
   { label: "Gallery", href: "#gallery" },
 ];
@@ -46,12 +47,24 @@ export const Navigation = () => {
           </div>
 
           {/* Logo - Center */}
-          <a href="#" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <a
+            href="#"
+            className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2"
+          >
             <Scissors className="w-6 h-6 text-primary" />
           </a>
 
           {/* CTA - Right */}
-          <div className="hidden md:block ml-auto">
+          <div className="hidden md:block ml-auto ">
+            <Button
+              className="mr-[1rem]"
+              variant="heroOutline"
+              size="sm"
+              asChild
+            >
+              <a href="#walkin">WALK IN</a>
+            </Button>
+
             <Button variant="hero" size="sm" asChild>
               <a href="#contact">Contact Us</a>
             </Button>
@@ -85,6 +98,9 @@ export const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <Button variant="heroOutline" size="xl" asChild>
+            <a href="#walkin">WALK IN</a>
+          </Button>
           <Button variant="hero" className="mt-4" asChild>
             <a href="#contact">Contact Us</a>
           </Button>

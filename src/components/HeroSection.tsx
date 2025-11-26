@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-barbershop.png";
+import heroImage from "@/assets/HeroBanner.webp";
 
 const trustBadges = [
   "Trusted by 1500+ customers every month",
@@ -28,7 +28,7 @@ export const HeroSection = () => {
           <h1 className="editorial-heading mb-2 opacity-0 animate-fade-up">
             <span className="text-gradient-primary italic">Royal Touch</span>
           </h1>
-          
+
           {/* Tagline */}
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground font-normal tracking-tight mb-6 opacity-0 animate-fade-up stagger-1">
             Premium Men's Grooming in Porur
@@ -39,14 +39,18 @@ export const HeroSection = () => {
 
           {/* Description */}
           <p className="body-large text-foreground/80 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-up stagger-2">
-            Where craftsmanship meets style. Experience precision haircuts, luxury grooming, 
-            and skin care performed by certified professionals — powered by premium L'Oréal products.
+            Where craftsmanship meets style. Experience precision haircuts,
+            luxury grooming, and skin care performed by certified professionals
+            — powered by premium L'Oréal products.
           </p>
 
           {/* Trust Badges */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-10 opacity-0 animate-fade-up stagger-3">
             {trustBadges.map((badge, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-foreground/70">
+              <div
+                key={index}
+                className="flex items-center gap-2 text-sm text-foreground/70"
+              >
                 <Check className="w-4 h-4 text-primary" />
                 <span>{badge}</span>
               </div>
@@ -70,7 +74,9 @@ export const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-up stagger-5">
-        <span className="text-xs uppercase tracking-widest text-foreground/50">Scroll</span>
+        <span className="text-xs uppercase tracking-widest text-foreground/50">
+          Scroll
+        </span>
         <div className="w-px h-12 bg-gradient-to-b from-foreground/50 to-transparent" />
       </div>
     </section>
