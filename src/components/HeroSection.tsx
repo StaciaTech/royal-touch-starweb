@@ -25,12 +25,12 @@ export const HeroSection = () => {
       <div className="relative z-10 container-narrow text-center pt-20 pb-12">
         <div className="max-w-4xl mx-auto">
           {/* Brand Name */}
-          <h1 className="editorial-heading mb-2 opacity-0 animate-fade-up">
+          <h1 className="editorial-heading mb-2 text-[6rem] opacity-0 animate-fade-up">
             <span className="text-gradient-primary italic">Royal Touch</span>
           </h1>
 
           {/* Tagline */}
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground font-normal tracking-tight mb-6 opacity-0 animate-fade-up stagger-1">
+          <p className="font-serif text-2xl md:text-3xl lg:text-5xl text-foreground font-normal tracking-tight mb-6 opacity-0 animate-fade-up stagger-1">
             Premium Men's Grooming in Porur
           </p>
 
@@ -38,7 +38,7 @@ export const HeroSection = () => {
           <div className="divider-accent mx-auto mb-8 opacity-0 animate-fade-up stagger-2" />
 
           {/* Description */}
-          <p className="body-large text-foreground/80 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-up stagger-2">
+          <p className="body-large text-[#fff] max-w-2xl mx-auto mb-8 opacity-0 animate-fade-up stagger-2">
             Where craftsmanship meets style. Experience precision haircuts,
             luxury grooming, and skin care performed by certified professionals
             — powered by premium L'Oréal products.
@@ -49,7 +49,7 @@ export const HeroSection = () => {
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
-                className="flex items-center gap-2 text-sm text-foreground/70"
+                className="flex items-center gap-2 text-sm text-[#fff]"
               >
                 <Check className="w-4 h-4 text-primary" />
                 <span>{badge}</span>
@@ -73,12 +73,12 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-up stagger-5">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-up stagger-5">
         <span className="text-xs uppercase tracking-widest text-foreground/50">
           Scroll
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-foreground/50 to-transparent" />
-      </div>
+      </div> */}
     </section>
   );
 };

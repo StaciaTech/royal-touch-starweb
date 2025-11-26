@@ -180,13 +180,13 @@ export const ContactSection = () => {
             </form>
           </div> */}
         </div>
-        <div className="aspect-[16/6] mt-8">
+        {/* <div className="aspect-[16/6] mt-8">
           <img
             src={AboveImage}
             alt=""
             className="w-full h-full object-cover object-top"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

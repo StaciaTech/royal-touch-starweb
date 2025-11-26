@@ -1,5 +1,5 @@
 import { Users, Award, ShieldCheck } from "lucide-react";
-import AboutImage from "../assets/Aboutus.jpg";
+import AboutImage from "../assets/Aboutus2.jpg";
 
 const stats = [
   { icon: Users, value: "1500+", label: "Customers Monthly" },

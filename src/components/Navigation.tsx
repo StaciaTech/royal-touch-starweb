@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Scissors } from "lucide-react";
+import Logo from "@/assets/miniLogo.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Walk In", href: "#walkin" },
   { label: "Testimonials", href: "#testimonials" },
+  { label: "Walk In", href: "#walkin" },
   { label: "Careers", href: "#careers" },
   { label: "Gallery", href: "#gallery" },
 ];
@@ -51,7 +52,8 @@ export const Navigation = () => {
             href="#"
             className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2"
           >
-            <Scissors className="w-6 h-6 text-primary" />
+            {/* <Scissors className="w-6 h-6 text-primary" /> */}
+            <img src={Logo} alt="Royal Touch" className="w-8 h-12" />
           </a>
 
           {/* CTA - Right */}
