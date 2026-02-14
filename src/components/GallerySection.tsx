@@ -1,12 +1,12 @@
 import { useState } from "react";
-import gallery1 from "@/assets/hair.png";
-import gallery2 from "@/assets/beard.png";
-import gallery3 from "@/assets/facepack.png";
-import gallery4 from "@/assets/color.png";
-import gallery5 from "@/assets/spa.png";
-import gallery6 from "@/assets/products.png";
-import gallery7 from "@/assets/others.png";
-import gallery8 from "@/assets/tools.png";
+import gallery1 from "@/assets/hair.webp";
+import gallery2 from "@/assets/beard.webp";
+import gallery3 from "@/assets/facepack.webp";
+import gallery4 from "@/assets/color.webp";
+import gallery5 from "@/assets/spa.webp";
+import gallery6 from "@/assets/products.webp";
+import gallery7 from "@/assets/others.webp";
+import gallery8 from "@/assets/tools.webp";
 
 const galleryItems = [
   {
