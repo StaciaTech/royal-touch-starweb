@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Users, TrendingUp, Heart } from "lucide-react";
+import careersImage from "@/assets/Gemini_Generated_Image_3wr3k73wr3k73wr3.png";
 
 const benefits = [
   { icon: GraduationCap, text: "Certification programs" },
@@ -23,8 +24,8 @@ export const CareersSection = () => {
             </h2>
             <div className="divider-accent mb-8" />
             <p className="body-large text-muted-foreground mb-8">
-              Join one of Chennai's fastest-growing grooming teams. 
-              We invest in our people because they're the heart of Royal Touch.
+              Join one of Chennai's fastest-growing grooming teams. We invest in
+              our people because they're the heart of Royal Touch.
             </p>
 
             {/* Benefits */}
@@ -48,15 +49,20 @@ export const CareersSection = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-card rounded-sm border border-border/50 flex items-center justify-center">
-              <div className="text-center p-8">
+            <div className="aspect-square bg-gradient-card rounded-sm border border-border/50 rounded-[0.5rem] flex items-center justify-center">
+              <img
+                src={careersImage}
+                alt="Royal Touch Careers"
+                className="w-full h-full object-cover rounded-[0.5rem] object-center"
+              />
+              {/* <div className="text-center p-8">
                 <div className="font-serif text-6xl md:text-7xl text-primary/20 mb-4">
                   RT
                 </div>
                 <p className="font-serif text-xl text-foreground/60 italic">
                   Where careers flourish
                 </p>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>

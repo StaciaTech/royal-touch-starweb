@@ -1,26 +1,86 @@
 import { useState } from "react";
+import gallery1 from "@/assets/hair.png";
+import gallery2 from "@/assets/beard.png";
+import gallery3 from "@/assets/facepack.png";
+import gallery4 from "@/assets/color.png";
+import gallery5 from "@/assets/spa.png";
+import gallery6 from "@/assets/products.png";
+import gallery7 from "@/assets/others.png";
+import gallery8 from "@/assets/tools.png";
 
 const galleryItems = [
-  { id: 1, category: "Hair", label: "Precision Fade" },
-  { id: 2, category: "Beard", label: "Beard Styling" },
-  { id: 3, category: "Interior", label: "Studio Ambience" },
-  { id: 4, category: "Facial", label: "Luxury Facial" },
-  { id: 5, category: "Hair", label: "Creative Color" },
-  { id: 6, category: "Tools", label: "Premium Tools" },
-  { id: 7, category: "Team", label: "Expert Team" },
-  { id: 8, category: "Interior", label: "Classic Setup" },
+  {
+    id: 1,
+    category: "Hair",
+    label: "Hair Styling",
+    image: gallery1,
+    position: "",
+  },
+  {
+    id: 2,
+    category: "Beard",
+    label: "Beard Styling",
+    image: gallery2,
+    position: "",
+  },
+  {
+    id: 3,
+    category: "Facial",
+    label: "Luxury Facial",
+    image: gallery3,
+    position: "center",
+  },
+  {
+    id: 4,
+    category: "Hair Dye",
+    label: "Premium Hair Dye",
+    image: gallery4,
+    position: "",
+  },
+  {
+    id: 5,
+    category: "Spa",
+    label: "Premium Spa",
+    image: gallery5,
+    position: "",
+  },
+  {
+    id: 6,
+    category: "Products",
+    label: "Luxury Products",
+    image: gallery6,
+    position: "",
+  },
+  {
+    id: 7,
+    category: "Services",
+    label: "Luxury Services",
+    image: gallery7,
+    position: "",
+  },
+  {
+    id: 8,
+    category: "Tools",
+    label: "Premium Tools",
+    image: gallery8,
+    position: "",
+  },
 ];
 
 export const GallerySection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Hair", "Beard", "Interior", "Facial"];
+  const categories = ["All", "Hair", "Beard", "Hair Dye", "Facial"];
 
-  const filteredItems = activeCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === "All"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="gallery" className="section-padding bg-card border-y border-border/50">
+    <section
+      id="gallery"
+      className="section-padding bg-card border-y border-border/50"
+    >
       <div className="container-narrow">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -58,17 +118,25 @@ export const GallerySection = () => {
               className="group relative aspect-square bg-gradient-card rounded-sm overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500"
             >
               {/* Placeholder content */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className="absolute inset-0 flex items-center justify-center"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: item.position,
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
                 <div className="text-center p-4">
                   <span className="block text-4xl text-primary/20 font-serif mb-2">
                     {item.id}
                   </span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                  {/* <span className="text-xs text-muted-foreground uppercase tracking-wider">
                     {item.category}
-                  </span>
+                  </span> */}
                 </div>
               </div>
-              
+
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-primary-foreground font-serif text-lg">

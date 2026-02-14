@@ -2,40 +2,63 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Arun Kumar",
+    name: "Aravind R V",
     rating: 5,
-    text: "Best barbershop in Porur! The attention to detail is incredible. Been coming here for 6 months now.",
+    text: "Best place in the locality at moderate price.",
   },
   {
-    name: "Vikram S.",
+    name: "Dhamayanth Raj.",
     rating: 5,
-    text: "Premium experience at reasonable prices. The beard spa is a must-try!",
+    text: "Good ambience and customer friendly staffs.",
   },
   {
-    name: "Rajesh M.",
+    name: "Lalith.",
     rating: 5,
-    text: "Finally found a place that understands modern hairstyles. The taper fade was perfect.",
+    text: "Regular for the past five years.Best part is the hygiene maintained and friendly staff.Might need long waiting time during weekends as like other saloons.Highly recommended!",
   },
   {
-    name: "Karthik R.",
+    name: "Reegan R.",
     rating: 5,
-    text: "Got my bridegroom makeover done here. Wife loved it! Professional team.",
+    text: "Customer friendly and very much affordable service. Baskar is so talented and he knows what hairstyle suits us best. Go for it if you want a better salon experience.",
   },
   {
-    name: "Suresh P.",
+    name: "Arun Kumar.",
     rating: 5,
-    text: "Clean, hygienic, and skilled barbers. The head massage is so relaxing.",
+    text: "The owner is friendly and he himself manages this place and they are doing a very great job as well.. Very affordable and the wait time is less when compared to other shops and they know what they are doing so it was one of the best places in this locality and the ambiance was good as well..They will accept card and UPI payments as well.",
   },
   {
-    name: "Dinesh K.",
+    name: "Maruthakumar Thirugnanam.",
     rating: 5,
-    text: "My go-to place for haircuts. Consistent quality every single time.",
+    text: "Their facials and hair spa are insanely relaxing. This is my go-to spot for monthly self-care.",
+  },
+  {
+    name: "Balaji Babu.",
+    rating: 5,
+    text: "Best barber, I've been a regular here for almost 12 years now. Baskaran the manager takes care of the shop really well.",
+  },
+  {
+    name: "Mani estcost.",
+    rating: 5,
+    text: "Neat. Clean. The place and people. Use and throw items like masks, hand gloves and towels. The price is very reasonable. Worth having services here. Request the public to avoid demanding air-conditioning.",
+  },
+  {
+    name: "Issac Sam Paul.",
+    rating: 5,
+    text: "I have been here since it opened, a nice place. Good customer response. Haircut is not as costly as other premium barbers. But the place looks very premium.",
+  },
+  {
+    name: "Deepak Raj.",
+    rating: 5,
+    text: "Very nice and will cut hair according to your wish slowly and nicely.. overall good service:heart❤️.",
   },
 ];
 
 export const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-card border-y border-border/50">
+    <section
+      id="testimonials"
+      className="section-padding bg-card border-y border-border/50"
+    >
       <div className="container-narrow">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -57,7 +80,7 @@ export const TestimonialsSection = () => {
             >
               {/* Quote Icon */}
               <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/10 group-hover:text-primary/20 transition-colors" />
-              
+
               {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (

@@ -1,8 +1,15 @@
-import { Scissors, MapPin, Phone, MessageCircle, Instagram, Clock } from "lucide-react";
+import {
+  Scissors,
+  MapPin,
+  Phone,
+  MessageCircle,
+  Instagram,
+  Clock,
+} from "lucide-react";
 
 const services = [
   "Hair Grooming",
-  "Beard Grooming", 
+  "Beard Grooming",
   "Facials & Skin Care",
   "Hair Spa & Treatments",
   "Colouring",
@@ -25,10 +32,13 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Scissors className="w-6 h-6 text-primary" />
-              <span className="font-serif text-xl font-medium">Royal Touch</span>
+              <span className="font-serif text-xl font-medium">
+                Royal Touch
+              </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Premium Men's Grooming in Porur, Chennai. Where craftsmanship meets style.
+              Premium Men's Grooming in Porur, Chennai. Where craftsmanship
+              meets style.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Clock className="w-4 h-4 text-primary" />
@@ -42,7 +52,10 @@ export const Footer = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="#services"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {service}
                   </a>
                 </li>
@@ -56,7 +69,10 @@ export const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -75,19 +91,32 @@ export const Footer = () => {
                 </span>
               </li>
               <li>
-                <a href="tel:+919876543210" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="tel:+919876543210"
+                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   <Phone className="w-4 h-4 text-primary" />
                   +91 98765 43210
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="https://wa.me/919876543210"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   <MessageCircle className="w-4 h-4 text-primary" />
                   WhatsApp
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/royaltouch" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="https://instagram.com/royaltouch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   <Instagram className="w-4 h-4 text-primary" />
                   @royaltouch
                 </a>
@@ -102,6 +131,9 @@ export const Footer = () => {
         <div className="container-narrow py-6">
           <p className="text-center text-sm text-muted-foreground">
             © 2025 Royal Touch. Premium Men's Grooming in Porur, Chennai.
+          </p>
+          <p className="text-center text-sm text-muted-foreground mt-[0.5rem]">
+            Made with <span className="text-primary">❤</span> by Stacia Corp
           </p>
         </div>
       </div>
