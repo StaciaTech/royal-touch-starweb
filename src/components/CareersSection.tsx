@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Users, TrendingUp, Heart } from "lucide-react";
-import careersImage from "@/assets/Gemini_Generated_Image_3wr3k73wr3k73wr3.png";
+import careersImage from "@/assets/Gemini_Generated_Image_3wr3k73wr3k73wr3.webp";
 
 const benefits = [
   { icon: GraduationCap, text: "Certification programs" },

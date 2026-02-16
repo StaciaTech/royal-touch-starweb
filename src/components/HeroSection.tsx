@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, MapPin } from "lucide-react";
-import heroImage from "@/assets/HeroBanner.webp";
+import heroImage from "@/assets/HeroBanner1.webp";
 
 const trustBadges = [
   "Trusted by 1500+ customers every month",
