@@ -45,7 +45,8 @@ export const ContactSection = () => {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/royaltouch",
+
+      href: "https://www.instagram.com/royale_touch_2011?igsh=MXY5NzZncmxuYTh5eQ==",
       text: "@royaltouch",
     },
   ];
