@@ -3,9 +3,11 @@ import {
   MapPin,
   Phone,
   MessageCircle,
+  Heart,
   Instagram,
   Clock,
 } from "lucide-react";
+import BuiltIcon from "../assets/BuiltIcon.svg";
 
 const services = [
   "Hair Grooming",
@@ -127,15 +129,49 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border/50">
-        <div className="container-narrow py-6">
-          <p className="text-center text-sm text-muted-foreground">
-            © 2025 Royal Touch. Premium Men's Grooming in Porur, Chennai.
-          </p>
-          <p className="text-center text-sm text-muted-foreground mt-[0.5rem]">
-            Made with <span className="text-primary">❤</span> by Stacia Corp
-          </p>
-        </div>
+      
+      <div className="pt-6 pb-6 border-t border-border text-center">
+        <p className="text-sm text-foreground/60 flex flex-wrap items-center justify-center gap-2 leading-relaxed">
+
+          <span>
+            © {new Date().getFullYear()} Royal Touch. Premium Men's Grooming.
+          </span>
+
+          {/* Built Icon + Text */}
+          <a
+            href="http://builtbystacia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-red-500 hover:text-red-600 transition-colors duration-200"
+          >
+            <img
+              src={BuiltIcon}
+              alt="Built by Stacia"
+              className="w-5 h-5 object-contain"
+            />
+            <span>Built</span>
+          </a>
+
+          <span>by</span>
+
+          {/* Stacia Link */}
+          <a
+            href="https://www.staciacorp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-500 hover:text-red-600 hover:underline transition-all duration-200"
+          >
+            Stacia
+          </a>
+
+          <span>with</span>
+
+          {/* Heart Icon */}
+          <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
+
+          <span>for Professional Services</span>
+
+        </p>
       </div>
     </footer>
   );
